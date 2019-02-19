@@ -1,0 +1,5 @@
+Le répertoire SQl stock les backup de structure de base de données.
+
+Nom des fichiers :
+201902191207.sql 
+201902191208.sql 

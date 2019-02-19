@@ -1,0 +1,2 @@
+le repertoire APP stock les scripts commun a toutes les applications
+
