@@ -37,3 +37,4 @@ require_once "../private/app/src/load_utils.php";
  * 7. Compilation de la page
  */
 require_once "../private/app/src/compile.php";
+

@@ -10,7 +10,8 @@
  /**
   * 1 definition des constantes
   */
-
+// Definir le chemin du répertoire "utils"
+define('UTILS_PATH', "../private/app/utils/");
   //WEBSITE_TITLE : Definition du titre di site
   define('WEBSITE_TITLE', "WebPizza !");
 
