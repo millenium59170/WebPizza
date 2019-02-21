@@ -21,4 +21,15 @@ if (!empty($_SERVER['REQUEST_URI']))
     $uri = $_SERVER['REQUEST_URI'];
 }
 
-print_r( $uri );
+
+// Recherche de l'URI dans le tableau de routage
+foreach ($routes as $route) 
+{
+    // le paramètre "path" doit correspondre à l'$uri
+    if ($route[1] == $uri) 
+    {
+        echo "<h3>Dans la boucle</h3>";
+        print_r($route[1]);
+        echo "<br>";
+    }
+}

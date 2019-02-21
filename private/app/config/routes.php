@@ -16,6 +16,12 @@ $routes = [
     ["homepage", "/", "homepage:index", ["HEAD","GET"]],
 
     // Page de contact
-    ["contact", "/contact", "contact:index", ["HEAD","GET"]]
-    
+    ["contact", "/contact", "contact:index", ["HEAD","GET"]],
+
+    // ---
+
+    // Erreur 404 
+    // /!\ TOUJOURS EN DERNIER DU TABLEAU ROUTE
+    ["error-404", "/404", "errors:404", ["HEAD","GET"]]
+
 ];
