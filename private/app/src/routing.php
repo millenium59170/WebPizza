@@ -28,8 +28,22 @@ foreach ($routes as $route)
     // le paramètre "path" doit correspondre à l'$uri
     if ($route[1] == $uri) 
     {
-        echo "<h3>Dans la boucle</h3>";
-        print_r($route[1]);
-        echo "<br>";
+        // On ajoute le nom de la route courante dans la variable $GLOBALS de PHP
+        // Pour l'utiliser par la suite.
+        $GLOBALS['route_active'] = $route[0];
+
+        // Si la route est trouvé dans la table de routage on sort de la boucle
+        // grace au mot clé "break;"
+        // La variable $route contient les infos de la dernière itération de la boucle
+        break;
     }
+}
+
+// A ce niveau soit la variable $route est renseignée grace à un URI trouvé 
+// dans le tableau $route, soit elle à pris la valeur de la dernière itération
+// du tableau $route, C.A.D. la route 404
+// var_dump($route);
+
+if (!isset($GLOBALS['route_active'])) {
+    $GLOBALS['route_active'] = "error-404";
 }

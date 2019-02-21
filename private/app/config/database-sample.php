@@ -12,7 +12,8 @@ $db_config = [
         "port" => "",       // Port de connection
         "user" => "",       // Nom d'utilisateur de la BDD
         "pass" => "",       // Mot de passe de l'utilisateur
-        "schema" => ""      // Nom de la base de données
+        "schema" => "",     // Nom de la base de données
+        "charset" => "utf8" // Jeu de caractère de la base de donnée
     ]
 
 ];
