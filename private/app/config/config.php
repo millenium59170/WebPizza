@@ -30,3 +30,18 @@ $dev_domains = [
 "localhost",
 "webpizza.local"
 ];
+
+//liste des configurations de connexions au base de donnéé par defaut
+$db_config = [];
+
+//liste des connexion aux base de donnéés
+// Cette liste sera sera nourris par le fichier db_connect.php 
+$db = [];
+
+
+//inclusion 
+require_once "database.php";
+
+/**
+ * 4. Definition des variables de routage
+ */
