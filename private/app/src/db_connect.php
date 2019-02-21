@@ -24,8 +24,6 @@ if (!isset($db_config)) {
 }
 
 // On boucle sur la liste de config des connexions aux bases de données
-// var_dump( $db_config );
-// print_r( $db_config );
 foreach ($db_config as $name => $params) 
 {
     // Génère la chaine DSN (Domain Source Name) PDO (ex: 'mysql:host=localhost;dbname=DBNAME')
@@ -45,7 +43,7 @@ foreach ($db_config as $name => $params)
     // Création de $db['main']
     $db[$name] = new PDO($db_dsn, $db_user, $db_pass);
 
-    // Comportement des erreur PDO
+    // Comportement des erreurs PDO
     if ($env == "dev") {
         $db[$name]->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     }
