@@ -8,6 +8,9 @@
  */
 function homepage_index() 
 {
+    //Code
+    //...
+    
     // Intégration de la vue
     include_once "../private/src/views/homepage/index.php";
 }

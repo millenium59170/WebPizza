@@ -1,0 +1,334 @@
+* {
+    position: relative;
+}
+
+*:hover,
+*:focus {
+    outline: none;
+    border-color: inherit;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+body {
+    padding-top: 80px;
+    padding-top: 115px;
+}
+
+textarea {
+    resize: none;
+}
+
+.btn {
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+}
+
+.btn-upper {
+    text-transform: uppercase;
+}
+
+.btn-no-radius {
+    border-radius: 0;
+}
+
+.btn-red {
+    background-color: #c00a27;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-red:hover {
+    background-color: rgba(192, 10, 39, 0.8);
+    border-color: rgba(192, 10, 39, 0.8);
+    color: #ffffff;
+}
+
+/**
+   * HEADER
+   * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+   */
+#main-header {
+    background-color: rgba(192, 10, 39, 0.8);
+    background-color: #c00a27;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#main-header .navbar {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#main-header .navbar a {
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+}
+
+#main-header .navbar a.active,
+#main-header .navbar a:hover {
+    color: #ffffff;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#main-header .navbar .nav-link.cart {
+    background-color: #8ca93e;
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+}
+
+#main-header .navbar .nav-link.cart:hover {
+    color: #ffffff;
+}
+
+.scrolled #main-header {
+    padding: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/**
+   * FOOTER
+   * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+   */
+#main-footer {
+    background-color: rgba(44, 44, 44, 0.95);
+}
+
+#main-footer .footer-links {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#main-footer .footer-legal {
+    background-color: rgba(44, 44, 44, 0.3);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+/**
+   * CONTENT
+   * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+   */
+#main-content {
+    z-index: 5;
+}
+
+section {
+    margin-bottom: 80px;
+}
+
+/* sections header */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header .lead {
+    color: #797979;
+}
+
+.section-title {
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+    text-transform: uppercase;
+    display: inline-block;
+    border-bottom: 3px solid #8ca93e;
+}
+
+.section-title::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.page-header {
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #8ca93e;
+}
+
+.page-header .page-title {
+    color: #2c2c2c;
+}
+
+.page-content {
+    margin-bottom: 80px;
+}
+
+.card {
+    border: 6px solid transparent;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.card .card-text {
+    color: rgba(44, 44, 44, 0.7);
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+.card:hover {
+    border: 6px solid rgba(44, 44, 44, 0.3);
+}
+
+/**
+   * CONTACT
+   * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+   */
+#contact {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    margin-bottom: 0;
+    background-image: url(http://localhost:8080/assets/images/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#contact .form-control {
+    background-color: rgba(44, 44, 44, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 0;
+    color: #ffffff;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#contact .form-control:focus {
+    background-color: rgba(44, 44, 44, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+#contact .has-error .form-control {
+    background-color: rgba(192, 10, 39, 0.4);
+    border: 1px solid #c00a27;
+}
+
+#contact ::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+}
+
+#contact :focus::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+}
+
+/**
+   * ERREUR 404
+   * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+   */
+#error-404 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    color: #8ca93e;
+}
+
+#error-404 .err-message {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#error-404 .err-message h2 {
+    font-size: 4rem;
+    color: #c00a27;
+    text-transform: uppercase;
+}
+
+#error-404 .err-message .lead {
+    font-size: 3rem;
+}
+
+/**
+   * Fichier de style de la Homepage
+   */
+#showcase .carousel-item {
+    height: 540px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#showcase .carousel-indicators li {
+    background-color: #c00a27;
+}
+
+#offers .offer-tile-large {
+    height: 452px;
+}
+
+#offers .offer-tile-large .title {
+    font-size: 4em;
+    line-height: 1.2;
+}
+
+#offers .offer-tile-medium {
+    height: 210px;
+}
+
+#offers .offer-tile-medium .title {
+    font-size: 3em;
+    line-height: 1.2;
+}
+
+#offers .offer-tile-small {
+    height: 210px;
+}
+
+#offers .offer-tile-small .title {
+    font-size: 2em;
+    line-height: 1.2;
+}
+
+#offers .offer-tile {
+    margin-bottom: 2rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#offers .offer-tile a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.8);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#offers .offer-tile a:hover {
+    text-decoration: none !important;
+    color: #ffffff;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#offers .caption {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#offers .caption .title {
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0px 5px 20px rgba(44, 44, 44, 0.7);
+}

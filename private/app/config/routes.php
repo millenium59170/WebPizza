@@ -26,12 +26,12 @@ $routes = [
     ["contact", "/contact", "contact:index", ["HEAD","GET","POST"]],
 
     // Pages de sécurité
-    ["login", "/login", "security:login", ["HEAD","GET","POST"]],
-    ["register", "/register", "security:register", ["HEAD","GET","POST"]],
-    ["forgotten_password", "/forgotten-password", "security:forgotten_password", ["HEAD","GET","POST"]],
+    ["login", "/connexion", "security:login", ["HEAD","GET","POST"]],
+    ["register", "/inscription", "security:register", ["HEAD","GET","POST"]],
+    ["forgotten_password", "/mot-de-passe-oublie", "security:forgotten_password", ["HEAD","GET","POST"]],
 
     // Page de commande
-    ["order", "/order", "order:index", ["HEAD","GET"]],
+    ["order", "/panier", "order:index", ["HEAD","GET"]],
 
     // Profil utilisateur
     ["account", "/mon-compte", "account", ["HEAD","GET"]],
