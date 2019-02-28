@@ -22,13 +22,19 @@ $routes = [
     ["drinks", "/boissons", "products:drinks", ["HEAD","GET"]],
     ["menus", "/menus", "products:menus", ["HEAD","GET"]],
 
-    // Page de contact
-    ["contact", "/contact", "contact:index", ["HEAD","GET","POST"]],
+    ["product_create", "/admin/product/create", "products:create", ["HEAD","GET","POST"]],
+    ["product_update", "/admin/product/update", "products:update", ["HEAD","GET","POST"]],
+    ["product_delete", "/admin/product/delete", "products:delete", ["HEAD","GET","POST"]],
+    // "/admin/product/update?id=X"
+
+    // Page de traitement du formulaire de contact
+    ["contact", "/contact", "contact:index", ["HEAD","POST"]],
 
     // Pages de sécurité
     ["login", "/connexion", "security:login", ["HEAD","GET","POST"]],
     ["register", "/inscription", "security:register", ["HEAD","GET","POST"]],
     ["forgotten_password", "/mot-de-passe-oublie", "security:forgotten_password", ["HEAD","GET","POST"]],
+    ["logout", "/deconnexion", "security:logout", ["HEAD","GET"]],
 
     // Page de commande
     ["order", "/panier", "order:index", ["HEAD","GET"]],

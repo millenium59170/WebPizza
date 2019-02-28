@@ -1,6 +1,7 @@
-<section id="contact">
+
+    <section id="contact">
         <div class="container">
-            <form name="contact" class="row" method="post" novalidate>
+            <form name="contact" action="/contact" class="row" method="post" novalidate>
 
                 <!-- Champ Prénom -->
                 <div class="col-12 col-md-4">

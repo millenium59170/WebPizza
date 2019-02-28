@@ -1,11 +1,6 @@
-<?php
+<?php include_once "../private/src/views/layout/header.php"; ?>
 
-include_once"../private/src/views/layout/header.php";
-?>
+Liste des salades
 
-burk salades
-
-<?php
-
-include_once"../private/src/views/layout/footer.php";
-?>
+<?php include_once "../private/src/views/contact/form.php"; ?>
+<?php include_once "../private/src/views/layout/footer.php"; ?>

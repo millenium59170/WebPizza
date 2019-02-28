@@ -78,6 +78,17 @@ textarea {
     transition: all 0.3s;
 }
 
+#main-header .navbar a.dropdown-item {
+    color: rgba(0, 0, 0, 0.6);
+    text-transform: initial;
+}
+#main-header .navbar a.dropdown-item.active,
+#main-header .navbar a.dropdown-item:hover {
+    color: #000;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
 #main-header .navbar .nav-link.cart {
     background-color: #8ca93e;
     color: rgba(255, 255, 255, 0.8);
@@ -127,6 +138,22 @@ textarea {
    */
 #main-content {
     z-index: 5;
+}
+
+/* Alert / Message Flash */
+.alert {
+    margin: 0;
+}
+
+/* formulaire */
+.crud-form,
+.security-form {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.form-link {
+    text-align: center;
+    padding-bottom: 30px;    
 }
 
 section {

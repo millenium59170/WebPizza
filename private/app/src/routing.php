@@ -18,7 +18,11 @@ if (!isset($routes)) {
 // Récupération de l'uri courant
 if (!empty($_SERVER['REQUEST_URI'])) 
 {
-    $uri = $_SERVER['REQUEST_URI'];
+    // webpizza.local/pizzas
+    // webpizza.local/admin/product/update?id=123
+    $uri = $_SERVER['REQUEST_URI']; // Récupération de l'URI avec eventuel paramètres
+    $uri = explode("?", $uri); // Séparation de l'URI est des paramètres 
+    $uri = $uri[0]; // Récupération de l'URI sans paramètre
 }
 
 

@@ -63,3 +63,14 @@ $route = [];
 
 // Inclusion de la config du routage
 require_once "routes.php";
+
+
+/**
+ * Definition des exepressions régulières
+ */
+
+$re = [
+    "firstname" => '/^[a-z-]+$/i',
+    "lastname" => '/^[a-z-]+$/i',
+    "email" => '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
+];

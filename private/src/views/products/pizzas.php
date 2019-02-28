@@ -1,11 +1,10 @@
+<?php include_once "../private/src/views/layout/header.php"; ?>
+
+<div class="container">
 <?php
-
-include_once"../private/src/views/layout/header.php";
+var_dump( $pizzas );
 ?>
+</div>
 
-miam 4 fromage
-
-<?php
-
-include_once"../private/src/views/layout/footer.php";
-?>
+<?php include_once "../private/src/views/contact/form.php"; ?>
+<?php include_once "../private/src/views/layout/footer.php"; ?>
