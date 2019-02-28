@@ -8,16 +8,15 @@
  */
 function products_pizzas() 
 {
-    global $db;
+    // Intégration du model
+    include_once "../private/src/models/products.php";
     
-    // Récupération de la liste des produits de type "Pizza"
-    $query = $db['main']->query( "SELECT t1.id, t1.name, t1.price, t3.name FROM products AS t1 INNER JOIN product_ingredients AS t2 ON t2.id_product = t1.id INNER JOIN ingredients AS t3 ON t3.id = t2.id_ingredient WHERE t1.type='pizza' ORDER BY t1.name ASC, t3.name ASC" );
-    $results = $query->fetchAll();
-
-    $pizzas = $results;
+    $pageTitle = "Nos Pizzas";
+    $products = getPizzas();
 
     // Intégration de la vue
-    include_once "../private/src/views/products/pizzas.php";
+    // include_once "../private/src/views/products/pizzas.php";
+    include_once "../private/src/views/products/read.php";
 }
 
 /**
@@ -25,11 +24,19 @@ function products_pizzas()
  */
 function products_salads() 
 {
-    // Code 
-    // ...
+    // Intégration du model
+    include_once "../private/src/models/products.php";
+    
+    $pageTitle = "Nos Salades";
+    $products = getSalads();
+
+    // Intégration de la vue
+    // include_once "../private/src/views/products/salads.php";
+    include_once "../private/src/views/products/read.php";
     
     // Intégration de la vue
-    include_once "../private/src/views/products/salads.php";
+    // include_once "../private/src/views/products/salads.php";
+   
 }
 
 /**
@@ -37,11 +44,17 @@ function products_salads()
  */
 function products_desserts() 
 {
-    // Code 
-    // ...
+    // Intégration du model
+    include_once "../private/src/models/products.php";
     
+    $pageTitle = "Nos Desserts";
+    $products = getDesserts();
+
     // Intégration de la vue
-    include_once "../private/src/views/products/desserts.php";
+    // include_once "../private/src/views/products/desserts.php";
+    include_once "../private/src/views/products/read.php";
+    
+ 
 }
 
 /**
@@ -49,23 +62,33 @@ function products_desserts()
  */
 function products_drinks() 
 {
-    // Code 
-    // ...
+     // Intégration du model
+     include_once "../private/src/models/products.php";
     
-    // Intégration de la vue
-    include_once "../private/src/views/products/drinks.php";
+     $pageTitle = "Nos Boissons";
+     $products = getDrinks();
+ 
+     // Intégration de la vue
+     // include_once "../private/src/views/products/drinks.php";
+     include_once "../private/src/views/products/read.php";
+    
+  
 }
 
 /**
  * Menus
  */
 function products_menus() 
-{
-    // Code 
-    // ...
+{ 
+    // Intégration du model
+    include_once "../private/src/models/products.php";
     
+    $pageTitle = "Menus";
+    $products = getMenus();
+
     // Intégration de la vue
-    include_once "../private/src/views/products/menus.php";
+    // include_once "../private/src/views/products/menus.php";
+    include_once "../private/src/views/products/read.php";
 }
 
 
@@ -77,7 +100,7 @@ function products_menus()
 function products_create() 
 {
     global $db;
-    
+
     // Données du fomulaire par défaut
     $name = null;
     $description = null;
@@ -94,6 +117,10 @@ function products_create()
         $description    = isset($_POST['description']) ? trim($_POST['description']) : null;
         $illustration   = isset($_POST['illustration']) ? trim($_POST['illustration']) : null;
         $price          = isset($_POST['price']) ? trim($_POST['price']) : null;
+
+        // Controle du form
+
+
 
         // print_r( $_POST );
     }
