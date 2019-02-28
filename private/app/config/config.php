@@ -73,7 +73,7 @@ require_once "routes.php";
 $re = [
     // Règles pour le formulaire de contact
     "firstname" => '/^[a-z-]+$/i',
-    "lastname" => '/^[a-z-]+$/i',
+    "lastname" => '/^[A-Z-]+$/',
     "email" => '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/',
 
     // Règles pour le CRUD product

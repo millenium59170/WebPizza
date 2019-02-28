@@ -71,7 +71,10 @@
                         </li>
                         <?php endif; ?>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($GLOBALS['route_active'] == "order" ? "active" : null) ?> cart" href="/panier">Panier</a>
+                            <a class="nav-link <?= ($GLOBALS['route_active'] == "order" ? "active" : null) ?> cart" href="/panier">
+                                Panier
+                                <?= getCartSummary() ?>
+                            </a>
                         </li>
                     </ul>
                 </div>

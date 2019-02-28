@@ -12,10 +12,31 @@ function products_pizzas()
     include_once "../private/src/models/products.php";
     
     $pageTitle = "Nos Pizzas";
-    $products = getPizzas();
+
+    $products = [];
+    $productsModel = getPizzas();
+
+    // Re-construction de la liste des produite
+    foreach ($productsModel as $product) 
+    {
+        if (!isset($products[ $product['productID'] ])) 
+        {
+            $products[ $product['productID'] ] = [];
+        }
+        
+        $products[ $product['productID'] ]['id'] = $product['productID'];
+        $products[ $product['productID'] ]['name'] = $product['productName'];
+        $products[ $product['productID'] ]['price'] = $product['productPrice'];
+        $products[ $product['productID'] ]['illustration'] = $product['productIllustration'];
+
+        if (!isset($products[ $product['productID'] ]['ingredients'])) {
+            $products[ $product['productID'] ]['ingredients'] = [];
+        }
+
+        array_push($products[ $product['productID'] ]['ingredients'], $product['ingredientName']);
+    }
 
     // Intégration de la vue
-    // include_once "../private/src/views/products/pizzas.php";
     include_once "../private/src/views/products/read.php";
 }
 
@@ -31,12 +52,7 @@ function products_salads()
     $products = getSalads();
 
     // Intégration de la vue
-    // include_once "../private/src/views/products/salads.php";
     include_once "../private/src/views/products/read.php";
-    
-    // Intégration de la vue
-    // include_once "../private/src/views/products/salads.php";
-   
 }
 
 /**
@@ -51,10 +67,7 @@ function products_desserts()
     $products = getDesserts();
 
     // Intégration de la vue
-    // include_once "../private/src/views/products/desserts.php";
     include_once "../private/src/views/products/read.php";
-    
- 
 }
 
 /**
@@ -62,32 +75,28 @@ function products_desserts()
  */
 function products_drinks() 
 {
-     // Intégration du model
-     include_once "../private/src/models/products.php";
+    // Intégration du model
+    include_once "../private/src/models/products.php";
     
-     $pageTitle = "Nos Boissons";
-     $products = getDrinks();
- 
-     // Intégration de la vue
-     // include_once "../private/src/views/products/drinks.php";
-     include_once "../private/src/views/products/read.php";
-    
-  
+    $pageTitle = "Nos Boissons";
+    $products = getDrinks();
+
+    // Intégration de la vue
+    include_once "../private/src/views/products/read.php";
 }
 
 /**
  * Menus
  */
 function products_menus() 
-{ 
+{
     // Intégration du model
     include_once "../private/src/models/products.php";
     
-    $pageTitle = "Menus";
+    $pageTitle = "Nos Menus";
     $products = getMenus();
 
     // Intégration de la vue
-    // include_once "../private/src/views/products/menus.php";
     include_once "../private/src/views/products/read.php";
 }
 
@@ -126,7 +135,7 @@ function products_create()
     }
 
     // Affichage du Formulaire
-    include_once "../private/src/views/products/crud/create.php";
+    include_once "../private/src/views/products/create.php";
 }
 
 /**

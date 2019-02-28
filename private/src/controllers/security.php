@@ -8,6 +8,8 @@
  */
 function security_login() 
 {
+    include_once "../private/src/models/order.php";
+
     global $db;
 
     // Verifie si l'utilisateur est deja identifié
@@ -32,6 +34,11 @@ function security_login()
     
         $r = $q->fetchAll(PDO::FETCH_ASSOC);
     
+        // Recupération du panier utilisateur a partir du numero de session
+        // Ce code permet d'associer un panier à un client qui s'identifie après 
+        // que celui-ci ait créer le panier en étant anonyme
+        $order = getOrderByUser( session_id() );
+
     
         // Si $r est un tableau vide, => L'UTILISATEUR N'EST PAS ENREGISTRE DANS LA BDD
         if (empty($r)) {
@@ -50,6 +57,11 @@ function security_login()
                 // Ajouter les informations utilisateur dans la $_SESSION
                 $_SESSION['user'] = $r[0];
     
+                // Associe l'ID utilisateur à sa commande en cours
+                if ($order) {
+                    updateOrderUser($order['id'], $_SESSION['user']['id']);
+                }
+
                 // Redirige l'utilisateur
                 redirect();
             }

@@ -5,7 +5,7 @@
         <div class="col-8 offset-2">
 
             <h1>Ajouter un produit</h1>
-            <?php include_once "../private/src/views/products/crud/form.php"; ?>
+            <?php include_once "../private/src/views/products/form.php"; ?>
             
         </div>
     </div>

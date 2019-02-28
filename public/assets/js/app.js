@@ -48,54 +48,54 @@ $(document).ready(() => {
     // Regular Expressions
     let $contact = $('form[name=contact]');
 
-    $contact.on('submit', () => {
+    // $contact.on('submit', () => {
 
-        var send = true;
+    //     var send = true;
 
-        let $firstname = $('#firstname');
-        let $lastname = $('#lastname');
-        let $email = $('#email');
-        let $message = $('#message');
+    //     let $firstname = $('#firstname');
+    //     let $lastname = $('#lastname');
+    //     let $email = $('#email');
+    //     let $message = $('#message');
 
-        // Controle du champ Firstname
-        if (!re.firstname.test($firstname.val())) {
-            $firstname.parents('.form-group').addClass('has-error');
-            send = false;
-        }
-        else {
-            $firstname.parents('.form-group').removeClass('has-error');
-        }
+    //     // Controle du champ Firstname
+    //     if (!re.firstname.test($firstname.val())) {
+    //         $firstname.parents('.form-group').addClass('has-error');
+    //         send = false;
+    //     }
+    //     else {
+    //         $firstname.parents('.form-group').removeClass('has-error');
+    //     }
 
-        // Controle du champ Lastname
-        if (!re.lastname.test($lastname.val())) {
-            $lastname.parents('.form-group').addClass('has-error');
-            send = false;
-        }
-        else {
-            $lastname.parents('.form-group').removeClass('has-error');
-        }
+    //     // Controle du champ Lastname
+    //     if (!re.lastname.test($lastname.val())) {
+    //         $lastname.parents('.form-group').addClass('has-error');
+    //         send = false;
+    //     }
+    //     else {
+    //         $lastname.parents('.form-group').removeClass('has-error');
+    //     }
 
-        // Controle du champ Email
-        if (!re.email.test($email.val())) {
-            $email.parents('.form-group').addClass('has-error');
-            send = false;
-        }
-        else {
-            $email.parents('.form-group').removeClass('has-error');
-        }
+    //     // Controle du champ Email
+    //     if (!re.email.test($email.val())) {
+    //         $email.parents('.form-group').addClass('has-error');
+    //         send = false;
+    //     }
+    //     else {
+    //         $email.parents('.form-group').removeClass('has-error');
+    //     }
 
-        // Controle du champ Message
-        if ($message.val().length < 10) {
-            $message.parents('.form-group').addClass('has-error');
-            send = false;
-        }
-        else {
-            $message.parents('.form-group').removeClass('has-error');
-        }
+    //     // Controle du champ Message
+    //     if ($message.val().length < 10) {
+    //         $message.parents('.form-group').addClass('has-error');
+    //         send = false;
+    //     }
+    //     else {
+    //         $message.parents('.form-group').removeClass('has-error');
+    //     }
 
-        if (!send) {
-            return false;
-        }
-    });
+    //     if (!send) {
+    //         return false;
+    //     }
+    // });
 
 });

@@ -43,4 +43,9 @@ require_once "../private/app/src/load_utils.php";
 /**
  * 8. Compilation de la page
  */
+require_once "../private/src/controllers/main_controller.php";
+
+/**
+ * 9. Compilation de la page
+ */
 require_once "../private/app/src/compile.php";
